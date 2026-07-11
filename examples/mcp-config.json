@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "cicall": {
+      "command": "/absolute/path/to/cicall-mcp",
+      "args": ["--project", "my-project", "--cwd", "/absolute/path/to/my-project"]
+    }
+  }
+}

@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "cicall"
+version = "0.1.0"
+description = "Terminal-independent MCP runtime for orchestrating CLI agents"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Cicall contributors" }]
+keywords = ["mcp", "agents", "cli", "pty", "orchestration"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Operating System :: MacOS",
+  "Operating System :: POSIX :: Linux",
+  "Topic :: Software Development :: Libraries :: Application Frameworks",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/basionwang-bot/cicall"
+Repository = "https://github.com/basionwang-bot/cicall"
+Issues = "https://github.com/basionwang-bot/cicall/issues"
+
+[project.scripts]
+cicall = "cicall.cli:main"
+cicall-mcp = "cicall.mcp:main"
+cicall-daemon = "cicall.daemon:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/cicall"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
